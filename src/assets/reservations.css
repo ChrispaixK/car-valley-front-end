@@ -1,0 +1,19 @@
+.reserved-cars {
+  display: flex;
+  flex-direction: column;
+}
+
+.r-car {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.r-car img {
+  max-width: 120px;
+}

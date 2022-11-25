@@ -1,0 +1,44 @@
+.add-car {
+  display: flex;
+  margin-top: 50px;
+}
+
+.add-form {
+  width: 50%;
+  padding: 30px 0;
+}
+
+.add-form h2 {
+  font-weight: 300;
+}
+
+.add-form input {
+  width: 95%;
+  height: 30px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding-left: 5px;
+  background-color: rgba(255, 186, 10, 0.438);
+  border: none;
+}
+
+.add-form button {
+  width: 98%;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-aside {
+  width: 50%;
+  background-color: var(--primary-color);
+}
+
+.form-aside img {
+  max-width: 420px;
+  margin-top: 50px;
+  margin-left: -80px;
+}

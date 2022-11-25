@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #ffa600;
+  --text-2: #858585;
+}
+
 body {
   margin: 0;
   font-family:
@@ -16,12 +21,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.bg-yl {
+  background-color: #c58206;
 }
