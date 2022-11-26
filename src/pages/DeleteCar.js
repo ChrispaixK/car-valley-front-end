@@ -4,7 +4,7 @@ import '../assets/App.css';
 
 const DeleteCar = () => (
   <div className="content">
-    <h2>Reservations page</h2>
+    <h2>Delete page</h2>
     <div className="reserved-cars">
       <div className="r-car">
         <div className="img-container">
