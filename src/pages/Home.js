@@ -13,7 +13,15 @@ const Home = () => (
             <img src={car.image} alt={car.model} />
           </div>
           <h4>{car.model}</h4>
-          <p>{car.description}</p>
+          <p>
+            {car.description}
+            {' '}
+            {car.color}
+            {' '}
+            {car.price}
+            {' '}
+            {car['release-date']}
+          </p>
         </div>
       ))}
     </div>
