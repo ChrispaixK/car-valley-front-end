@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { getCookie, setCookie } from './cookie';
 
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
 const baseURL = 'http://127.0.0.1:3000/';
 
 const authentication = (ep, credentials) => axios.post(
@@ -13,7 +11,7 @@ const authentication = (ep, credentials) => axios.post(
   },
 ).then((response) => {
   const { token, user } = response.data;
-  if (ep === 'users/login') {
+  if (ep === 'login') {
     setCookie('token', token);
     setCookie('user', JSON.stringify(user));
   }
@@ -25,10 +23,6 @@ const authentication = (ep, credentials) => axios.post(
     return { status: 'failure', error: 'Check Your Connection' };
   }
 });
-
-const get = (ep) => axios.get(
-  `${baseURL}${ep}`,
-).then(response => response);
 
 const getWithToken = (ep) => axios.get(
   `${baseURL}${ep}`,
@@ -51,5 +45,5 @@ const reqWithToken = (method, ep, obj) => axios({
 });
 
 export {
-  delay, authentication, get, getWithToken, reqWithToken,
+  authentication, getWithToken, reqWithToken,
 };

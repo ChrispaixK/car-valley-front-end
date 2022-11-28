@@ -3,7 +3,7 @@ import { logger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
 import carXer from './xers/carXer';
-import { reservationXer } from './xers/reservationXer';
+import reservationXer from './xers/reservationXer';
 
 const store = configureStore({
   reducer: {
