@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
@@ -7,6 +7,9 @@ import Reserve from './pages/Reserve';
 import AddCar from './pages/AddCar';
 import DeleteCar from './pages/DeleteCar';
 import { getCookie } from './services/cookie';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+
 
 const App = () => {
   const token = getCookie('token');
