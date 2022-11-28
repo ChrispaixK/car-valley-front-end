@@ -6,6 +6,7 @@ import Reservations from './pages/Reservations';
 import Reserve from './pages/Reserve';
 import AddCar from './pages/AddCar';
 import DeleteCar from './pages/DeleteCar';
+import CarDetails from './components/CarDetails';
 
 const App = () => (
   <>
@@ -13,6 +14,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/reserve" element={<Reserve />} />
+      <Route path="/id" element={<CarDetails />} />
       <Route path="/reservations" element={<Reservations />} />
       <Route path="/add-a-car" element={<AddCar />} />
       <Route path="/delete-a-car" element={<DeleteCar />} />
