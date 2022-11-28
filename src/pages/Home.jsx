@@ -20,7 +20,7 @@ const Home = () => (
             {' '}
             {car.price}
             {' '}
-            {car['release-date']}
+            {car.release_date}
           </p>
         </div>
       ))}

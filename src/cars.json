@@ -2,7 +2,7 @@
     {
         "id": 1,
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "model": "Mahindra",
         "description": "4x4 Suv from india short description of the car",
@@ -12,7 +12,7 @@
         "id": 2,
         "model": "Chevrolet Camaro",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "V8 Sedan from America short description of the car",
         "image": "https://i.postimg.cc/y81zX370/car-photo-311956-removebg-preview.png"
@@ -21,7 +21,7 @@
         "id": 3,
         "model": "BMW new x8",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "Germany Sport Car 2021 winner of GSP short description of the car",
         "image": "https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png"
@@ -30,7 +30,7 @@
         "id": 4,
         "model": "Mahindra",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "4x4 Suv from india short description of the car",
         "image": "https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png"
@@ -39,7 +39,7 @@
         "id": 5,
         "model": "Chevrolet Camaro",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "V8 Sedan from America short description of the car",
         "image": "https://i.postimg.cc/y81zX370/car-photo-311956-removebg-preview.png"
@@ -48,7 +48,7 @@
         "id": 6,
         "model": "BMW new x8",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "Germany Sport Car 2021 winner of GSP short description of the car",
         "image": "https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png"
@@ -57,7 +57,7 @@
         "id": 7,
         "model": "Mahindra",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "4x4 Suv from india short description of the car",
         "image": "https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png"
@@ -66,7 +66,7 @@
         "id": 8,
         "model": "Chevrolet Camaro",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "V8 Sedan from America short description of the car",
         "image": "https://i.postimg.cc/y81zX370/car-photo-311956-removebg-preview.png"
@@ -75,7 +75,7 @@
         "id": 9,
         "model": "BMW new x8",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "Germany Sport Car 2021 winner of GSP short description of the car",
         "image": "https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png"
@@ -84,7 +84,7 @@
         "id": 10,
         "model": "Mahindra",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "4x4 Suv from india short description of the car",
         "image": "https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png"
@@ -93,7 +93,7 @@
         "id": 11,
         "model": "Chevrolet Camaro",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "V8 Sedan from America short description of the car",
         "image": "https://i.postimg.cc/y81zX370/car-photo-311956-removebg-preview.png"
@@ -102,7 +102,7 @@
         "id": 12,
         "model": "BMW new x8",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "Germany Sport Car 2021 winner of GSP short description of the car",
         "image": "https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png"
@@ -111,7 +111,7 @@
         "id": 13,
         "model": "Mahindra",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "4x4 Suv from india short description of the car",
         "image": "https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png"
@@ -120,7 +120,7 @@
         "id": 14,
         "model": "Chevrolet Camaro",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "V8 Sedan from America short description of the car",
         "image": "https://i.postimg.cc/y81zX370/car-photo-311956-removebg-preview.png"
@@ -129,7 +129,7 @@
         "id": 15,
         "model": "BMW new x8",
         "color": "white",
-        "release-date": "2022-10-03",
+        "release_date": "2022-10-03",
         "price": "42500 USD",
         "description": "Germany Sport Car 2021 winner of GSP short description of the car",
         "image": "https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png"
