@@ -19,9 +19,11 @@ const removeCookie = (key) => Cookie.remove(key);
 
 const checkCookie = (key) => {
   if (getCookie(key)) return true;
-  else return false;
+  return false;
 };
 
-const returnCurrentUser = () => checkCookie('user') ? JSON.parse(getCookie('user')) : {};
+const returnCurrentUser = () => (checkCookie('user') ? JSON.parse(getCookie('user')) : {});
 
-export { setCookie, getCookie, removeCookie, checkCookie, returnCurrentUser };
+export {
+  setCookie, getCookie, removeCookie, checkCookie, returnCurrentUser,
+};

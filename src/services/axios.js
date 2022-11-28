@@ -19,9 +19,8 @@ const authentication = (ep, credentials) => axios.post(
 }).catch((error) => {
   if (error.response) {
     return error.response.data;
-  } else {
-    return { status: 'failure', error: 'Check Your Connection' };
   }
+  return { status: 'failure', error: 'Check Your Connection' };
 });
 
 const getWithToken = (ep) => axios.get(
