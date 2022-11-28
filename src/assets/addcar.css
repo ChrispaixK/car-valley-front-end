@@ -40,5 +40,6 @@
 .form-aside img {
   max-width: 420px;
   margin-top: 50px;
-  margin-left: -80px;
+  margin-left: -250px;
+  position: fixed;
 }
