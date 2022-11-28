@@ -1,0 +1,30 @@
+.reserve-form {
+  text-align: center;
+  padding: 30px 0;
+  background-image: url('https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png');
+  background-repeat: no-repeat;
+}
+
+.reserve-form input {
+  width: 50%;
+  height: 30px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.reserve-form button {
+  width: 51.2%;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.reserve-title {
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
