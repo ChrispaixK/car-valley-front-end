@@ -29,12 +29,11 @@ const Login = () => {
 
   return (
     <>
-      <div className="flex justify-center h-screen pt-12 text-white bg-dark">
-        <div className="flex flex-col items-center">
-          <div className="my-8 header">Log In</div>
+      <div>
+        <div>
+          <div>Log In</div>
           <form onSubmit={handleSubmit} ref={formRef}>
             <input
-              className="input"
               ref={usernameRef}
               type="text"
               placeholder="Username"
@@ -43,28 +42,27 @@ const Login = () => {
             {' '}
             <br />
             <input
-              className="input"
               type="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
             {' '}
             <br />
-            <input type="checkbox" className="checkbox" />
+            <input type="checkbox" />
             <span>Remember me</span>
             {' '}
             <br />
-            <div className="flex justify-center w-full my-2">
-              <button type="submit" className="btn hover:shadow-gray-600 disabled:opacity-60 disabled:bg-btn disabled:shadow-none" disabled={!!(!username || !password)}>Log In</button>
+            <div>
+              <button type="submit" disabled={!!(!username || !password)}>Log In</button>
             </div>
           </form>
           {
-            err ? <p className="text-red-400">{err}</p> : <div />
+            err ? <p>{err}</p> : <div />
           }
-          <div className="flex items-center justify-center">
-            <Link to="/register" className="link">Register</Link>
-            <div className="vertical-line" />
-            <Link to="/forgot-password" className="link">Forgot your password</Link>
+          <div>
+            <Link to="/register" >Register</Link>
+            <div />
+            <Link to="/forgot-password" >Forgot your password</Link>
           </div>
         </div>
       </div>
