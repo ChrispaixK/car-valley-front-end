@@ -1,14 +1,16 @@
 import React from 'react';
-
-import Cars from '../cars.json';
+import { useSelector } from 'react-redux';
 
 import '../assets/App.css';
 import '../assets/reservations.css';
 
-const Reservations = () => (
+const Reservations = () => {
+  const cars = useSelector((state) => state.cars)
+
+  return (
   <div className="content">
     <h2>Reservations page</h2>
-    {Cars.map((car) => (
+    {cars.map((car) => (
       <div className="reserved-cars" key={car.id}>
         <div className="r-car">
           <div className="img-container">
@@ -22,6 +24,6 @@ const Reservations = () => (
       </div>
     ))}
   </div>
-);
+)};
 
 export default Reservations;
