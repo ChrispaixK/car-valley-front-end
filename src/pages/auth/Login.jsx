@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { authentication } from '../../services/axios';
 
 const Login = () => {
-  const LOGIN_ENDPOINT = 'login';
+  const LOGIN_ENDPOINT = 'users/login';
   const usernameRef = useRef();
   const formRef = useRef();
 
