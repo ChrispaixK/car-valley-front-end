@@ -1,11 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCars } from '../redux/xers/carXer';
+
 import '../assets/App.css';
 import '../assets/cars.css';
 
 const Home = () => {
   const cars = useSelector((state) => state.cars);
+  const dispatch = useDispatch()
 
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+  
   return (
   <div className="content">
     <div className="cars">
