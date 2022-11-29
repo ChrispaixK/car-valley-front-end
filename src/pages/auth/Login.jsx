@@ -29,8 +29,8 @@ const Login = () => {
 
   return (
     <>
-      <div>
-        <div>
+      <div className="login">
+        <div className="login-container">
           <div>Log In</div>
           <form onSubmit={handleSubmit} ref={formRef}>
             <input

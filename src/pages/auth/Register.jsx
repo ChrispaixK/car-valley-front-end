@@ -44,8 +44,8 @@ const Register = () => {
 
   return (
     <>
-      <section className="flex justify-center pt-12 text-white h-fit bg-dark">
-        <div className="flex flex-col items-center my-8">
+      <section className="flex justify-center pt-12 text-white h-fit bg-dark register">
+        <div className="flex flex-col items-center my-8 register-container">
 
           <div className="header">Register</div>
 
@@ -61,11 +61,9 @@ const Register = () => {
                 className="mt-2 mb-4 input"
                 placeholder="E.g. Rex"
                 onChange={(e) => setUsername(e.target.value)}
-                onFocus={() => setFocusUsername(true)}
-                onBlur={() => setFocusUsername(false)}
+                // onFocus={() => setFocusUsername(true)}
+                // onBlur={() => setFocusUsername(false)}
                 required
-                aria-invalid={validUsername ? 'false' : 'true'}
-                aria-describedby="uidnote"
               />
             </label>
 
@@ -94,7 +92,7 @@ const Register = () => {
             <label htmlFor="dob">
               <div>dob:</div>
               <input
-                type="text"
+                type="type"
                 className="mt-2 mb-4 input"
                 placeholder="E.g. 18-03-2000"
                 onChange={(e) => setDob(e.target.value)}
@@ -104,11 +102,12 @@ const Register = () => {
 
             <label htmlFor="password">
               Password:
-              <span className={validPassword ? 'inline ml-4 text-green-500' : 'hidden'}>
-                <FontAwesomeIcon icon={faCheck} />
+              <span>
+               {/* <FontAwesomeIcon icon={faCheck}/> */}
               </span>
-              <span className={!validPassword && password ? 'inline ml-4 text-red-500' : 'hidden'}>
-                <FontAwesomeIcon icon={faTimes} />
+              <span>
+                {/* <FontAwesomeIcon icon={faTimes} /> */}
+                
               </span>
               <br />
               <input
@@ -117,22 +116,20 @@ const Register = () => {
                 className="mt-2 mb-4 input"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-                onFocus={() => setFocusPassword(true)}
-                onBlur={() => setFocusPassword(false)}
+                // onFocus={() => setFocusPassword(true)}
+                // onBlur={() => setFocusPassword(false)}
                 required
-                aria-invalid={validPassword ? 'false' : 'true'}
-                aria-describedby="pwdnote"
               />
             </label>
 
             <label htmlFor="confirm_password">
               Confirm Password:
-              <span className={validConfirm && confirmPassword ? 'inline ml-4 text-green-500' : 'hidden'}>
+              {/* <span className={validConfirm && confirmPassword ? 'inline ml-4 text-green-500' : 'hidden'}>
                 <FontAwesomeIcon icon={faCheck} />
               </span>
               <span className={!validConfirm && confirmPassword ? 'inline ml-4 text-red-500' : 'hidden'}>
                 <FontAwesomeIcon icon={faTimes} />
-              </span>
+              </span> */}
               <br />
               <input
                 type="password"
@@ -140,11 +137,9 @@ const Register = () => {
                 className="mt-2 mb-4 input"
                 placeholder="Confirm Password"
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                onFocus={() => setFocusConfirm(true)}
-                onBlur={() => setFocusConfirm(false)}
+                // onFocus={() => setFocusConfirm(true)}
+                // onBlur={() => setFocusConfirm(false)}
                 required
-                aria-invalid={validPassword ? 'false' : 'true'}
-                aria-describedby="confirmnote"
               />
             </label>
             <br />
