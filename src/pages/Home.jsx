@@ -5,6 +5,7 @@ import { fetchCars } from '../redux/xers/carXer';
 
 import '../assets/App.css';
 import '../assets/cars.css';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   const cars = useSelector((state) => state.cars);
@@ -17,7 +18,9 @@ const Home = () => {
   return (
   <div className="content">
     <div className="cars">
+      
       {cars.map((car) => (
+        <NavLink to={`details/${car.id}`} key={car.id} id={car.id} >
         <div className="car-container" key={car.id}>
           <div className="car-image">
             <span className="dot" />
@@ -34,7 +37,9 @@ const Home = () => {
             {car.release_date}
           </p>
         </div>
+        </NavLink>
       ))}
+      
     </div>
   </div>
 )};
