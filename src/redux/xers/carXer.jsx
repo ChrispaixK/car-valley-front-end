@@ -9,14 +9,14 @@ const DELETE_CAR = 'e2l-fe/cars/DELETE_CAR';
 
 const initialState = [
   {
-    "id": 1,
-    "color": "",
-    "release_date": "",
-    "price": "",
-    "model": "",
-    "description": "ONLOAD ...",
-    "image": "https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png"
-  }
+    id: 1,
+    color: '',
+    release_date: '',
+    price: '',
+    model: '',
+    description: 'ONLOAD ...',
+    image: 'https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png',
+  },
 ];
 
 const carXer = (state = initialState, action) => {

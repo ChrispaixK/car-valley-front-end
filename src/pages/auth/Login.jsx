@@ -60,9 +60,9 @@ const Login = () => {
             err ? <p>{err}</p> : <div />
           }
           <div>
-            <Link to="/register" >Register</Link>
+            <Link to="/register">Register</Link>
             <div />
-            <Link to="/forgot-password" >Forgot your password</Link>
+            <Link to="/forgot-password">Forgot your password</Link>
           </div>
         </div>
       </div>

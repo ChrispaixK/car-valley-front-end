@@ -16,32 +16,33 @@ const Home = () => {
   }, [dispatch]);
   
   return (
-  <div className="content">
-    <div className="cars">
+    <div className="content">
+      <div className="cars">
       
-      {cars.map((car) => (
+        {cars.map((car) => (
         <NavLink to={`details/${car.id}`} key={car.id} id={car.id} >
-        <div className="car-container" key={car.id}>
-          <div className="car-image">
-            <span className="dot" />
-            <img src={car.image} alt={car.model} />
+          <div className="car-container" key={car.id}>
+            <div className="car-image">
+              <span className="dot" />
+              <img src={car.image} alt={car.model} />
+            </div>
+            <h4>{car.model}</h4>
+            <p>
+              {car.description}
+              {' '}
+              {car.color}
+              {' '}
+              {car.price}
+              {' '}
+              {car.release_date}
+            </p>
           </div>
-          <h4>{car.model}</h4>
-          <p>
-            {car.description}
-            {' '}
-            {car.color}
-            {' '}
-            {car.price}
-            {' '}
-            {car.release_date}
-          </p>
-        </div>
         </NavLink>
-      ))}
+        ))}
       
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 export default Home;
