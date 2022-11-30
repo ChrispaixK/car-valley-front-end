@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useRef, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -103,11 +104,11 @@ const Register = () => {
             <label htmlFor="password">
               Password:
               <span>
-               {/* <FontAwesomeIcon icon={faCheck}/> */}
+                {/* <FontAwesomeIcon icon={faCheck}/> */}
               </span>
               <span>
                 {/* <FontAwesomeIcon icon={faTimes} /> */}
-                
+
               </span>
               <br />
               <input
