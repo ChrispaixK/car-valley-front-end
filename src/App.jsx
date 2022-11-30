@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Reservations from './pages/Reservations';
 import Reserve from './pages/Reserve';
 import AddCar from './pages/AddCar';
+import CarDetails from './components/CarDetails'
 import DeleteCar from './pages/DeleteCar';
 import { getCookie } from './services/cookie';
 import Login from './pages/auth/Login';
@@ -42,6 +43,9 @@ const App = () => {
         <Route path="/add-a-car" element={!token ? (
           <Navigate to="/login" replace />
         ) : <AddCar />} />
+         <Route path="/details/:carId" element={!token ? (
+          <Navigate to="/login" replace />
+        ) : <CarDetails />} />
         <Route path="/delete-a-car" element={!token ? (
           <Navigate to="/login" replace />
         ) : <DeleteCar />} />
