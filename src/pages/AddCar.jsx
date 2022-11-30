@@ -1,49 +1,35 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addCar } from '../redux/xers/carXer';
 import '../assets/App.css';
 import '../assets/addcar.css';
 
 function AddCar() {
   const [model, setModel] = useState('');
-  const [brand, setBrand] = useState('');
   const [releaseDate, setReleaseDate] = useState('');
   const [color, setColor] = useState('');
   const [price, setPrice] = useState('');
-  const [country, setCountry] = useState('');
-  const [speed, setSpeed] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setModel('');
-    setBrand('');
     setReleaseDate('');
     setColor('');
     setPrice('');
-    setCountry('');
-    setSpeed('');
 
-    console.log(
-      'car added successfully!',
-      '\n',
-      'CAR INFOS :',
-      '\n',
-      brand,
-      '\n',
+    const newCar = {
       model,
-      '\n',
-      releaseDate,
-      '\n',
       color,
-      '\n',
+      image,
       price,
-      '\n',
-      country,
-      '\n',
-      speed,
-      '\n',
       description,
-    );
+      release_date: releaseDate,
+    };
+    dispatch(addCar(newCar));
+    window.location = '/';
   };
   return (
     <div className="content">
@@ -53,18 +39,12 @@ function AddCar() {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Brand ..."
-              value={brand}
-              onChange={(e) => setBrand(e.target.value)}
-            />
-            <input
-              type="text"
               placeholder="Model ..."
               value={model}
               onChange={(e) => setModel(e.target.value)}
             />
             <input
-              type="text"
+              type="date"
               placeholder="Release date ..."
               value={releaseDate}
               onChange={(e) => setReleaseDate(e.target.value)}
@@ -74,18 +54,6 @@ function AddCar() {
               placeholder="Color ..."
               value={color}
               onChange={(e) => setColor(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Country ..."
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Speed ..."
-              value={speed}
-              onChange={(e) => setSpeed(e.target.value)}
             />
             <input
               type="text"
