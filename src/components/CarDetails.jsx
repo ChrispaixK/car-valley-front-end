@@ -1,50 +1,63 @@
-import React from 'react';
-import Car from '../cars.json';
+import React, { useEffect } from 'react';
 import '../assets/carDetails.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCars } from '../redux/xers/carXer';
+import { useParams } from 'react-router-dom';
 
-const CarDetails = () => (
+const CarDetails = () => {
+  const cars = useSelector((state) => state.cars);
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
+
+  const { carId }  = useParams();
+  const carIndex = carId -1;
+  return (
   <div className="content">
     <div className="car-details">
       <div className="car-img">
-        <img src={Car[0].image} alt={Car[0].model} />
+        <img src={cars[carIndex].image} alt={cars[carIndex].model} />
       </div>
       <div className="car-description">
         <div className="descr-top">
-          <h4>{Car[0].model}</h4>
-          <p>{Car[1].brand}</p>
+          <h4>{cars[carIndex].model}</h4>
+          <p>{cars[carIndex].brand}</p>
         </div>
         <div className="descr-btm">
           <p>
             Color :
             {' '}
-            {Car[0].color}
+            {cars[carIndex].color}
           </p>
           <p>
             Year of Production :
             {' '}
-            {Car[0]['release-date']}
+            {cars[carIndex].release_date}
           </p>
           <p>
             Origin country :
             {' '}
-            {Car[0].country}
+            No country
           </p>
           <p>
 
             Top Speed :
             {' '}
-            {Car[0].speed}
+            No speed 
           </p>
           <p>
             Price :
             {' '}
-            {Car[0].price}
+            {cars[carIndex].price}
           </p>
         </div>
       </div>
     </div>
     <button className="reserve" type="button">Reserve</button>
   </div>
-);
+  )
+  };
 
 export default CarDetails;

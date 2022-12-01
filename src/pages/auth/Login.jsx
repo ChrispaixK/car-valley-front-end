@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { authentication } from '../../services/axios';
 
 const Login = () => {
-  const LOGIN_ENDPOINT = 'login';
+  const LOGIN_ENDPOINT = 'users/login';
   const usernameRef = useRef();
   const formRef = useRef();
 
@@ -29,8 +29,8 @@ const Login = () => {
 
   return (
     <>
-      <div>
-        <div>
+      <div className="login">
+        <div className="login-container">
           <div>Log In</div>
           <form onSubmit={handleSubmit} ref={formRef}>
             <input
@@ -60,9 +60,9 @@ const Login = () => {
             err ? <p>{err}</p> : <div />
           }
           <div>
-            <Link to="/register" >Register</Link>
+            <Link to="/register">Register</Link>
             <div />
-            <Link to="/forgot-password" >Forgot your password</Link>
+            <Link to="/forgot-password">Forgot your password</Link>
           </div>
         </div>
       </div>

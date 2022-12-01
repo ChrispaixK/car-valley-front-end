@@ -11,7 +11,7 @@ const authentication = (ep, credentials) => axios.post(
   },
 ).then((response) => {
   const { token, user } = response.data;
-  if (ep === 'login') {
+  if (ep === 'users/login') {
     setCookie('token', token);
     setCookie('user', JSON.stringify(user));
   }

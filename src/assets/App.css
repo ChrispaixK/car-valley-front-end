@@ -13,3 +13,115 @@ div.content {
   background-color: #f00;
   border: none;
 }
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.login-container {
+  border-radius: 5px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.719);
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.login-container input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.login-container span {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-left: 5px;
+}
+
+.login-container button {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 10px;
+  padding: 5px 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.login-container a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.register {
+  width: 100vw;
+  position: absolute;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.register-container {
+  margin: 50px 0;
+  border-radius: 5px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.719);
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.register-container input {
+  padding: 12px 20px;
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.register-container span {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-left: 5px;
+}
+
+.register-container button {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 10px;
+  padding: 5px 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.register-container a {
+  text-decoration: none;
+  font-size: 10px;
+}
