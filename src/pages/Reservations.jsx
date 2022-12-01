@@ -18,11 +18,11 @@ const Reservations = () => {
           <div className="r-car">
             <div className="img-container">
               <span className="dot" />
-              <img src={res.car?.image} alt={res.car?.id} />
+              <img src={res?.car?.image} alt={res?.car?.id} />
             </div>
-            <p>{res.model}</p>
-            <p>{res.city}</p>
-            <p>{res.date}</p>
+            <p>{res?.model}</p>
+            <p>{res?.city}</p>
+            <p>{res?.date}</p>
           </div>
         </div>
       ))}

@@ -6,7 +6,18 @@
   background-repeat: no-repeat;
 }
 
-.reserve-form input {
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  width: 40%;
+}
+
+.input-container input,
+.select-input {
   width: 100%;
   height: 45px;
   margin-bottom: 15px;
@@ -25,7 +36,7 @@
 }
 
 .reserve-title {
-  color: #fff;
+  color: var(--primary-color);
   margin-top: 50px;
   margin-bottom: 0;
 }
@@ -42,4 +53,13 @@
 .btn-bookreservation:hover {
   background-color: var(--primary-dark-color);
   transition: 1s;
+}
+
+.btn-reserve-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-reserve-container > button {
+  height: 45px;
 }
