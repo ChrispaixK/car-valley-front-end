@@ -1,5 +1,6 @@
+/* eslint-disable no-restricted-globals */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getWithToken, reqWithToken } from '../../services/axios';
+import { getWithToken, reqWithToken, deleteWithToken } from '../../services/axios';
 
 const CARS_ENDPOINT = 'cars/';
 
@@ -8,15 +9,6 @@ const ADD_CAR = 'e2l-fe/cars/ADD_CAR';
 const DELETE_CAR = 'e2l-fe/cars/DELETE_CAR';
 
 const initialState = [
-  {
-    id: 1,
-    color: '',
-    release_date: '',
-    price: '',
-    model: '',
-    description: 'ONLOAD ...',
-    image: 'https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png',
-  },
 ];
 
 const carXer = (state = initialState, action) => {
@@ -45,7 +37,7 @@ const addCar = createAsyncThunk(ADD_CAR, async (newCar) => {
 });
 
 const deleteCar = createAsyncThunk(DELETE_CAR, async (id) => {
-  await reqWithToken('DELETE', CARS_ENDPOINT, id);
+  await deleteWithToken(`${CARS_ENDPOINT}${id}`);
 });
 
 export default carXer;
