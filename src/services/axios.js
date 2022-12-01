@@ -33,16 +33,33 @@ const getWithToken = (ep) => axios.get(
   },
 ).then((response) => response);
 
-const reqWithToken = (method, ep, obj) => axios({
-  method,
-  url: `${baseURL}${ep}`,
-  data: JSON.stringify(obj),
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${getCookie('token')}`,
-  },
-});
+const reqWithToken = (method, ep, obj) => {
+  console.log(`${baseURL}${ep}`);
+
+  axios({
+    method,
+    url: `${baseURL}${ep}`,
+    data: JSON.stringify(obj),
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${getCookie('token')}`,
+    },
+  });
+};
+
+const deleteWithToken = async (ep) => {
+  axios.delete(
+    `${baseURL}${ep}`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${getCookie('token')}`,
+      },
+    },
+
+  );
+};
 
 export {
-  authentication, getWithToken, reqWithToken,
+  authentication, getWithToken, reqWithToken, deleteWithToken,
 };

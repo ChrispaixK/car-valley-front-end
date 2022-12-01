@@ -13,6 +13,7 @@ const DeleteCar = () => {
 
   const handleDelete = (id) => {
     dispatch(deleteCar(id));
+    window.location.reload();
   };
 
   return (

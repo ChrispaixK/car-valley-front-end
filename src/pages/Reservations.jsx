@@ -1,25 +1,28 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchReservations } from '../redux/xers/reservationXer';
+import { returnCurrentUser } from '../services/cookie';
 
 import '../assets/App.css';
 import '../assets/reservations.css';
 
 const Reservations = () => {
-  const cars = useSelector((state) => state.cars);
-
+  const reservations = useSelector((state) => state.reservations);
+  const dispatch = useDispatch();
+  useEffect(() => { dispatch(fetchReservations(returnCurrentUser().id)); }, [dispatch]);
   return (
     <div className="content">
       <h2>Reservations page</h2>
-      {cars.map((car) => (
-        <div className="reserved-cars" key={car.id}>
+      {reservations?.map((res) => (
+        <div className="reserved-cars" key={res.id}>
           <div className="r-car">
             <div className="img-container">
               <span className="dot" />
-              <img src={car.image} alt={car.id} />
+              <img src={res.car?.image} alt={res.car?.id} />
             </div>
-            <p>{car.model}</p>
-            <p>City</p>
-            <p>Date</p>
+            <p>{res.model}</p>
+            <p>{res.city}</p>
+            <p>{res.date}</p>
           </div>
         </div>
       ))}
