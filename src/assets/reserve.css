@@ -1,6 +1,7 @@
 .reserve-form {
   text-align: center;
   padding: 30px 0;
+
   /* background-image: url('https://i.postimg.cc/KvFXx3kC/BMW-Z4-Roadster-Right-Front-Three-Quarter-153914-removebg-preview.png'); */
   background-repeat: no-repeat;
 }
@@ -30,12 +31,12 @@
 }
 
 .btn-bookreservation {
-    height: 30px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-bookreservation:hover {

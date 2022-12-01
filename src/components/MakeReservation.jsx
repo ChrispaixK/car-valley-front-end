@@ -13,7 +13,6 @@ function MakeReservation({ showModal, handleClose, car }) {
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
   const dispatch = useDispatch();
-  console.log(`User id===>${returnCurrentUser().id}`);
   const handleMakeReservation = () => {
     const data = [{
       car_id: car.id, date, city,
