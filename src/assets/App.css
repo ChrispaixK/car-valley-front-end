@@ -125,3 +125,23 @@ input[type="checkbox"] {
   text-decoration: none;
   font-size: 10px;
 }
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header button {
+  position: fixed;
+  border: none;
+  background-color: rgb(18, 73, 255);
+  color: #fff;
+  font-size: 10px;
+  padding: 5px 15px;
+  margin: 10px 5px 10px 0;
+  box-shadow: rgba(93, 83, 50, 0.377) 0 6px 12px -2px, rgba(0, 0, 0, 0.452) 0 3px 7px -3px;
+}
+
+.cars {
+  margin-top: 50px;
+}
