@@ -7,17 +7,17 @@
 }
 
 .form {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input-container {
- width: 40%;
+  width: 40%;
 }
 
-
-.input-container input, .select-input {
+.input-container input,
+.select-input {
   width: 100%;
   height: 45px;
   margin-bottom: 15px;
@@ -56,11 +56,10 @@
 }
 
 .btn-reserve-container {
- display: flex;
- justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.btn-reserve-container> button {
+.btn-reserve-container > button {
   height: 45px;
-  
 }
