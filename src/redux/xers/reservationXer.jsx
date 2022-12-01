@@ -25,7 +25,6 @@ const fetchReservations = createAsyncThunk(FETCH_RESERVATIONS, async (userId) =>
 });
 
 const addReservation = createAsyncThunk(ADD_RESERVATION, async (newReservation) => {
-  console.log(`==============${newReservation[1]}`);
   await reqWithToken('POST', RESERVATIONS_ENDPOINT(newReservation[1]), newReservation[0]);
 });
 
