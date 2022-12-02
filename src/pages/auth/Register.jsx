@@ -12,7 +12,8 @@ const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [errMsges, setErrMsges] = useState('');
+  const [validConfirm, setValidConfirm] = useState(false);
+  const [errMsges, setErrMsges] = useState(null);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dob, setDob] = useState('');
@@ -23,6 +24,7 @@ const Register = () => {
 
   useEffect(() => {
     setErrMsges('');
+    password === confirmPassword ? setValidConfirm(true) : setValidConfirm(false);
   }, [username, password, confirmPassword]);
 
   const handleSubmit = async (e) => {
@@ -30,8 +32,8 @@ const Register = () => {
 
     const newUser = {
       username,
-      firstName,
-      lastName,
+      first_name: firstName,
+      last_name: lastName,
       dob,
       password,
     };
@@ -62,8 +64,6 @@ const Register = () => {
                 className="mt-2 mb-4 input"
                 placeholder="E.g. Rex"
                 onChange={(e) => setUsername(e.target.value)}
-                // onFocus={() => setFocusUsername(true)}
-                // onBlur={() => setFocusUsername(false)}
                 required
               />
             </label>
@@ -93,7 +93,7 @@ const Register = () => {
             <label htmlFor="dob">
               <div>dob:</div>
               <input
-                type="type"
+                type="date"
                 className="mt-2 mb-4 input"
                 placeholder="E.g. 18-03-2000"
                 onChange={(e) => setDob(e.target.value)}
@@ -103,13 +103,6 @@ const Register = () => {
 
             <label htmlFor="password">
               Password:
-              <span>
-                {/* <FontAwesomeIcon icon={faCheck}/> */}
-              </span>
-              <span>
-                {/* <FontAwesomeIcon icon={faTimes} /> */}
-
-              </span>
               <br />
               <input
                 type="password"
@@ -117,20 +110,12 @@ const Register = () => {
                 className="mt-2 mb-4 input"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-                // onFocus={() => setFocusPassword(true)}
-                // onBlur={() => setFocusPassword(false)}
                 required
               />
             </label>
 
             <label htmlFor="confirm_password">
               Confirm Password:
-              {/* <span className={validConfirm && confirmPassword ? 'inline ml-4 text-green-500' : 'hidden'}>
-                <FontAwesomeIcon icon={faCheck} />
-              </span>
-              <span className={!validConfirm && confirmPassword ? 'inline ml-4 text-red-500' : 'hidden'}>
-                <FontAwesomeIcon icon={faTimes} />
-              </span> */}
               <br />
               <input
                 type="password"
@@ -138,8 +123,6 @@ const Register = () => {
                 className="mt-2 mb-4 input"
                 placeholder="Confirm Password"
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                // onFocus={() => setFocusConfirm(true)}
-                // onBlur={() => setFocusConfirm(false)}
                 required
               />
             </label>
@@ -153,7 +136,7 @@ const Register = () => {
             <div className="flex justify-center w-full my-2">
               <button
                 type="button"
-                disabled={!!(!username || !firstName || !dob || !lastName || !password || !confirmPassword)}
+                disabled={!!(!username || !firstName || !dob || !lastName || !password || !confirmPassword || !validConfirm)}
                 className="btn hover:shadow-gray-600 disabled:opacity-60 disabled:bg-btn disabled:shadow-none"
                 onClick={handleSubmit}
               >

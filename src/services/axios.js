@@ -34,8 +34,6 @@ const getWithToken = (ep) => axios.get(
 ).then((response) => response);
 
 const reqWithToken = (method, ep, obj) => {
-  console.log(`${baseURL}${ep}`);
-
   axios({
     method,
     url: `${baseURL}${ep}`,
