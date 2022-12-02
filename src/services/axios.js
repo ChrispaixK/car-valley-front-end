@@ -47,6 +47,19 @@ const reqWithToken = (method, ep, obj) => {
   });
 };
 
+const reqWithTokenCar = (method, ep, obj) => {
+  console.log(`${baseURL}${ep}`);
+
+  axios({
+    method,
+    url: `${baseURL}${ep}`,
+    data: obj,
+    headers: {
+      Authorization: `Bearer ${getCookie('token')}`,
+    },
+  });
+};
+
 const deleteWithToken = async (ep) => {
   axios.delete(
     `${baseURL}${ep}`,
@@ -61,5 +74,5 @@ const deleteWithToken = async (ep) => {
 };
 
 export {
-  authentication, getWithToken, reqWithToken, deleteWithToken,
+  authentication, getWithToken, reqWithToken, deleteWithToken, reqWithTokenCar,
 };
