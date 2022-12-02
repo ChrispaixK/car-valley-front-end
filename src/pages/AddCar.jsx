@@ -15,22 +15,24 @@ function AddCar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setModel('');
-    setReleaseDate('');
-    setColor('');
-    setPrice('');
+    const formData = new FormData();
 
-    const newCar = {
-      model,
-      color,
-      image,
-      price,
-      description,
-      release_date: releaseDate,
-    };
-    dispatch(addCar(newCar));
+    formData.append('model', model);
+    formData.append('release_date', releaseDate);
+    formData.append('color', color);
+    formData.append('price', price);
+    formData.append('description', description);
+    formData.append('image', image);
+    
+
+    dispatch(addCar(formData));
     window.location = '/';
   };
+
+  const onImageChange = (e) => {
+    setImage({ image: e.target.files[0] });
+  };
+
   return (
     <div className="content">
       <div className="add-car">
@@ -62,10 +64,10 @@ function AddCar() {
               onChange={(e) => setDescription(e.target.value)}
             />
             <input
-              type="text"
-              placeholder="Image link ..."
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
+             type="file"
+             multiple={false}
+             placeholder="Import image"
+             onChange={onImageChange}
             />
             <input
               type="number"
