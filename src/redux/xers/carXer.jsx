@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getWithToken, reqWithToken, deleteWithToken } from '../../services/axios';
+import { getWithToken, deleteWithToken, reqWithTokenCar } from '../../services/axios';
 
 const CARS_ENDPOINT = 'cars/';
 
@@ -32,8 +32,8 @@ const fetchCars = createAsyncThunk(FETCH_CARS, async () => {
   return response.data;
 });
 
-const addCar = createAsyncThunk(ADD_CAR, async (newCar) => {
-  await reqWithToken('POST', CARS_ENDPOINT, newCar);
+const addCar = createAsyncThunk(ADD_CAR, async (FormData) => {
+  await reqWithTokenCar('post', CARS_ENDPOINT, FormData);
 });
 
 const deleteCar = createAsyncThunk(DELETE_CAR, async (id) => {
