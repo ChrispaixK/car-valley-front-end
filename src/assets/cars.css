@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.cars a {
+  text-decoration: none;
+}
+
 .car-container {
   display: flex;
   flex-direction: column;
@@ -17,12 +21,16 @@
 }
 
 .car-container h4 {
-  /* margin-bottom: -10px; */
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--secondary-color);
 }
 
 .car-container p {
   font-size: 12px;
   color: var(--text-2);
+  height: 80px;
+  overflow-y: scroll;
 }
 
 .car-container img {
@@ -31,6 +39,7 @@
 
 .car-image {
   margin-top: 10px;
+  height: 80px;
 }
 
 .dot {
