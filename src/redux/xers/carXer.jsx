@@ -8,10 +8,7 @@ const FETCH_CARS = 'e2l-fe/cars/FETCH_CARS';
 const ADD_CAR = 'e2l-fe/cars/ADD_CAR';
 const DELETE_CAR = 'e2l-fe/cars/DELETE_CAR';
 
-const initialState = [
-];
-
-const carXer = (state = initialState, action) => {
+const carXer = (state = [], action) => {
   switch (action.type) {
     case `${FETCH_CARS}/fulfilled`:
       return action.payload;

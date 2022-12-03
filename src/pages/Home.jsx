@@ -1,5 +1,4 @@
 /* eslint-disable import/order */
-/* eslint-disable react/button-has-type */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCars } from '../redux/xers/carXer';
@@ -54,6 +53,7 @@ const Home = () => {
               </p>
               <div>
                 <button
+                  type="button"
                   className="btn-bookreservation"
                   onClick={() => {
                     setShowModal(true);
