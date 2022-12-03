@@ -9,13 +9,14 @@ import '../assets/cars.css';
 import MakeReservation from '../components/MakeReservation';
 import { NavLink } from 'react-router-dom';
 import { removeCookie } from '../services/cookie';
+import { FaEllipsisV } from 'react-icons/fa';
 
 const Home = () => {
   const cars = useSelector((state) => state.cars);
   const [showModal, setShowModal] = useState(false);
   const [mCar, setMCar] = useState({});
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     dispatch(fetchCars());
   }, [dispatch]);
@@ -28,10 +29,18 @@ const Home = () => {
 
   const handleHideModal = () => setShowModal(false);
 
+  const [openAvatar, setOpenAvatar]= useState(false)
+  
   return (
     <div className="content">
       <div className="header">
-        <button type="button" className="logout" onClick={logout}>Log Out</button>
+        {/* <button type="button" className="logout" onClick={logout}>Log Out</button> */}
+        <i className="logout" onClick={()=> {setOpenAvatar(!openAvatar)}}><FaEllipsisV/></i>
+        <div className={`dropdown-avatar ${openAvatar?'inactive' : 'active'} `}>
+          <ul>
+            <button type="button" className="logout" onClick={logout} >Log Out</button>
+          </ul>
+        </div>
       </div>
       <div className="cars">
 
@@ -62,4 +71,11 @@ const Home = () => {
   );
 };
 
+function DropdownItem(){
+  return (
+    <li>
+      <p>first drop</p>
+    </li>
+  )
+}
 export default Home;

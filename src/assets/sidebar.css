@@ -5,18 +5,17 @@
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
-  overflow: auto;
 }
 
 .sidebar nav {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .sidebar a {
-  display: block;
   color: black;
-  padding: 10px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar li {
@@ -30,7 +29,89 @@
 }
 
 .sidebar a:hover:not(.active) {
-  background-color: rgba(85, 85, 85, 0.384);
+  background-color: var(--primary-color);
   color: white;
   transition: all ease-in 0.3s;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav-links {
+  padding-left: 10px;
+}
+
+.nav-links i {
+  color: var(--secondary-color);
+  position: absolute;
+  font-size: 12px;
+}
+
+.nav-links p {
+  margin-left: 25px;
+  margin-bottom: 0;
+  padding: 10px 0;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+}
+
+.open-icon {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.open-icon i {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 14px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: rgba(100, 100, 111, 0.637) 0 7px 29px 0;
+}
+
+.close-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-icon i {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: rgba(100, 100, 111, 0.637) 0 7px 29px 0;
+}
+
+@media screen and (min-width: 469px) {
+  .hidden {
+    display: none;
+  }
 }
