@@ -52,17 +52,6 @@ const Home = () => {
                 {' '}
                 {car.release_date}
               </p>
-              <div>
-                <button
-                  className="btn-bookreservation"
-                  onClick={() => {
-                    setShowModal(true);
-                    setMCar(car);
-                  }}
-                >
-                  Book reservation
-                </button>
-              </div>
             </div>
           </NavLink>
         ))}
