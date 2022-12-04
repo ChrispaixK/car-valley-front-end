@@ -29,17 +29,14 @@ const Home = () => {
 
   const handleHideModal = () => setShowModal(false);
 
-  const [openAvatar, setOpenAvatar]= useState(false)
+  const [openOption, setOpenOption]= useState(false)
   
   return (
     <div className="content">
       <div className="header">
-        {/* <button type="button" className="logout" onClick={logout}>Log Out</button> */}
-        <i className="logout" onClick={()=> {setOpenAvatar(!openAvatar)}}><FaEllipsisV/></i>
-        <div className={`dropdown-avatar ${openAvatar?'inactive' : 'active'} `}>
-          <ul>
+        <i className="logout" onClick={()=> {setOpenOption(!openOption)}}><FaEllipsisV/></i>
+        <div className={`dropdown-avatar ${openOption?'inactive' : 'active'} `}>
             <button type="button" className="logout" onClick={logout} >Log Out</button>
-          </ul>
         </div>
       </div>
       <div className="cars">
@@ -71,11 +68,4 @@ const Home = () => {
   );
 };
 
-function DropdownItem(){
-  return (
-    <li>
-      <p>first drop</p>
-    </li>
-  )
-}
 export default Home;

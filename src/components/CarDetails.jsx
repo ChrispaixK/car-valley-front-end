@@ -59,6 +59,7 @@ const CarDetails = () => {
           </div>
         </div>
       </div>
+      <div className='bottom'>
       <button
         className="reserve"
         type="button"
@@ -69,6 +70,8 @@ const CarDetails = () => {
         Reserve
 
       </button>
+      </div>
+      
       <MakeReservation showModal={showModal} handleClose={handleHideModal} car={car[0]} />
     </div>
   );
