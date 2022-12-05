@@ -113,9 +113,8 @@ footer p {
 }
 
 .close-icon {
-  display: flex;
+  margin: 1rem 0.2rem 1rem;
   justify-content: flex-end;
-  padding-top: 10px;
   padding-right: 5px;
 }
 
@@ -137,8 +136,8 @@ footer p {
   box-shadow: rgba(100, 100, 111, 0.637) 0 7px 29px 0;
 }
 
-@media screen and (min-width: 469px) {
+@media screen and (max-width: 469px) {
   .hidden {
-    display: none;
+    display: flex;
   }
 }

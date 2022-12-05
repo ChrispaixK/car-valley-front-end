@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch } from 'react-redux';
 import { returnCurrentUser } from '../services/cookie';
 import { addReservation } from '../redux/xers/reservationXer';
-import '../assets/App.css'
+import '../assets/App.css';
 
 function MakeReservation({ showModal, handleClose, car }) {
   const [userName, setUsername] = useState(returnCurrentUser().username);
@@ -32,7 +32,7 @@ function MakeReservation({ showModal, handleClose, car }) {
         <Modal.Body>
           <div className="">
             <div className="reserve-form">
-              <form className='modal-reserve-form'>
+              <form className="modal-reserve-form">
                 <input type="text" defaultValue={userName} disabled />
                 <input type="text" defaultValue={car.model} disabled />
                 <input type="text" placeholder="Enter City..." value={city} onChange={(e) => setCity(e.target.value)} />

@@ -59,19 +59,19 @@ const CarDetails = () => {
           </div>
         </div>
       </div>
-      <div className='bottom'>
-      <button
-        className="reserve"
-        type="button"
-        onClick={() => {
-          setShowModal(true);
-        }}
-      >
-        Reserve
+      <div className="bottom">
+        <button
+          className="reserve"
+          type="button"
+          onClick={() => {
+            setShowModal(true);
+          }}
+        >
+          Reserve
 
-      </button>
+        </button>
       </div>
-      
+
       <MakeReservation showModal={showModal} handleClose={handleHideModal} car={car[0]} />
     </div>
   );
