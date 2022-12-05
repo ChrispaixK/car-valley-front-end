@@ -1,8 +1,13 @@
-div.content {
+.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 100vh;
   text-align: center;
+}
+
+.content h2 {
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .button-delete {
@@ -128,20 +133,77 @@ input[type="checkbox"] {
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: center;
 }
 
-.header button {
-  position: fixed;
+.header i {
+  width: 10px;
+  height: 25px;
   border: none;
-  background-color: rgb(18, 73, 255);
+  background-color: var(--secondary-color);
   color: #fff;
-  font-size: 10px;
-  padding: 5px 15px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px 5px 10px 0;
+  border-radius: 3px;
   box-shadow: rgba(93, 83, 50, 0.377) 0 6px 12px -2px, rgba(0, 0, 0, 0.452) 0 3px 7px -3px;
+}
+
+.modalheader {
+  color: var(--secondary-color);
+  font-size: 13px;
+}
+
+.modalheader h5 {
+  font-size: 18px;
+}
+
+.modalheader button {
+  background-color: #f00;
+  color: antiquewhite;
+  font-size: 10px;
 }
 
 .cars {
   margin-top: 50px;
+}
+
+.dropdown-avatar.active {
+  display: none;
+}
+
+.dropdown-avatar {
+  height: 25px;
+}
+
+.dropdown-avatar button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 10px;
+  border: none;
+  margin-right: 5px;
+}
+
+.modal-reserve-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+@media screen and (max-width: 468px) {
+  .content {
+    margin-left: 0;
+  }
 }
