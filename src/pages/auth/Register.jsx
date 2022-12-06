@@ -47,10 +47,10 @@ const Register = () => {
 
   return (
     <>
-      <section className="flex justify-center pt-12 text-white h-fit bg-dark register">
-        <div className="flex flex-col items-center my-8 register-container">
+      <section className="register">
+        <div className="register-container">
 
-          <div className="header">Register</div>
+          <h3>Register</h3>
 
           <form>
             <label htmlFor="username">
@@ -61,7 +61,6 @@ const Register = () => {
                 id="username"
                 ref={usernameRef}
                 autoComplete="off"
-                className="mt-2 mb-4 input"
                 placeholder="E.g. Rex"
                 onChange={(e) => setUsername(e.target.value)}
                 required
@@ -72,7 +71,6 @@ const Register = () => {
               <div>First Name:</div>
               <input
                 type="text"
-                className="mt-2 mb-4 input"
                 placeholder="E.g. Htet"
                 onChange={(e) => setFirstName(e.target.value)}
                 id="firstname"
@@ -83,7 +81,6 @@ const Register = () => {
               <div>Last Name:</div>
               <input
                 type="text"
-                className="mt-2 mb-4 input"
                 placeholder="E.g. Naing"
                 onChange={(e) => setLastName(e.target.value)}
                 id="lastname"
@@ -91,11 +88,9 @@ const Register = () => {
             </label>
 
             <label htmlFor="dob">
-              <div>dob:</div>
+              <div>Date of birth:</div>
               <input
                 type="date"
-                className="mt-2 mb-4 input"
-                placeholder="E.g. 18-03-2000"
                 onChange={(e) => setDob(e.target.value)}
                 id="dob"
               />
@@ -107,7 +102,6 @@ const Register = () => {
               <input
                 type="password"
                 id="password"
-                className="mt-2 mb-4 input"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -120,24 +114,16 @@ const Register = () => {
               <input
                 type="password"
                 id="confirm_password"
-                className="mt-2 mb-4 input"
                 placeholder="Confirm Password"
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
             </label>
-            <br />
 
-            <input type="checkbox" className="checkbox" />
-            <span>Remember me</span>
-            {' '}
-            <br />
-
-            <div className="flex justify-center w-full my-2">
+            <div>
               <button
                 type="button"
                 disabled={!!(!username || !firstName || !dob || !lastName || !password || !confirmPassword || !validConfirm)}
-                className="btn hover:shadow-gray-600 disabled:opacity-60 disabled:bg-btn disabled:shadow-none"
                 onClick={handleSubmit}
               >
                 Register
