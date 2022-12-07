@@ -11,17 +11,26 @@ const Reserve = () => {
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
   const [car, setCar] = useState('');
+  const [errMsg, setErrMsg] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCars());
   }, [dispatch]);
 
+  useEffect(() => {
+    setErrMsg('');
+  }, [city, date, car])
+
   const handleMakeReservation = (e) => {
     e.preventDefault();
     const data = [{
       car_id: car, date, city,
     }, returnCurrentUser().id];
+    if (city === '' || date === '' || car === '') {
+      setErrMsg('All fields are required');
+      return;
+    }
     dispatch(addReservation(data));
     window.location.href = '/reservations';
   };
@@ -52,6 +61,9 @@ const Reserve = () => {
             <button type="submit" onClick={handleMakeReservation}>Reserve</button>
           </div>
         </form>
+        {
+          errMsg && <p className="error" aria-live="assertive">{errMsg}</p>
+        }
       </div>
     </div>
   );

@@ -39,6 +39,7 @@ function AddCar() {
       return;
     }
     dispatch(addCar(newCar));
+    window.location = '/';
   };
   return (
     <div className="content">
