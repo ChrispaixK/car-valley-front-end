@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addCar } from '../redux/xers/carXer';
 import '../assets/App.css';
 import '../assets/addcar.css';
+import { useEffect } from 'react';
 
 function AddCar() {
   const [model, setModel] = useState('');
@@ -13,6 +14,10 @@ function AddCar() {
   const [image, setImage] = useState('');
   const [errMsg, setErrMsg] = useState(null);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    setErrMsg('');
+  }, [model, color, image, price, description, releaseDate])
 
   const handleSubmit = (e) => {
     e.preventDefault();
