@@ -13,11 +13,17 @@ const MakeReservation=({ showModal, handleClose, car })=> {
   const [userName, setUsername] = useState(returnCurrentUser().username);
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
+  const [errMsg, setErrMsg] = useState(null);
+  
   const dispatch = useDispatch();
   const handleMakeReservation = () => {
     const data = [{
       car_id: car.id, date, city,
     }, returnCurrentUser().id];
+    if (city === '' || date === '') {
+      setErrMsg('All fields are required');
+      return;
+    }
     dispatch(addReservation(data));
     window.location.href = '/reservations';
   };
@@ -38,6 +44,9 @@ const MakeReservation=({ showModal, handleClose, car })=> {
                 <input type="text" placeholder="Enter City..." value={city} onChange={(e) => setCity(e.target.value)} />
                 <input type="date" placeholder="Enter Date..." value={date} onChange={(e) => setDate(e.target.value)} />
               </form>
+              {
+            errMsg && <p className="error" aria-live="assertive">{errMsg}</p>
+          }
             </div>
           </div>
         </Modal.Body>
