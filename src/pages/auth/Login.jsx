@@ -57,7 +57,7 @@ const Login = () => {
             </div>
           </form>
           {
-            err ? <p>{err}</p> : <div />
+            err ? <p className="error">{err}</p> : <div />
           }
           <div>
             <Link to="/register">Register</Link>

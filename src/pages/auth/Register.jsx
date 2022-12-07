@@ -141,7 +141,7 @@ const Register = () => {
           </form>
 
           {
-            errMsges ? errMsges.map((msg) => <p key={msg} className="text-red-400" aria-live="assertive">{msg}</p>) : <div />
+            errMsges ? errMsges.map((msg) => <p key={msg} className="error" aria-live="assertive">{msg}</p>) : <div />
           }
 
           <div className="flex items-center justify-center">

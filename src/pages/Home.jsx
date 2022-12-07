@@ -1,5 +1,4 @@
 /* eslint-disable import/order */
-/* eslint-disable react/button-has-type */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCars } from '../redux/xers/carXer';
@@ -16,7 +15,7 @@ const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [mCar, setMCar] = useState({});
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(fetchCars());
   }, [dispatch]);
@@ -30,7 +29,7 @@ const Home = () => {
   const handleHideModal = () => setShowModal(false);
 
   const [openOption, setOpenOption]= useState(false)
-  
+
   return (
     <div className="content">
       <div className="header">
