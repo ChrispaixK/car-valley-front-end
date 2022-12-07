@@ -47,10 +47,10 @@ const Register = () => {
 
   return (
     <>
-      <section className="flex justify-center pt-12 text-white h-fit bg-dark register">
-        <div className="flex flex-col items-center my-8 register-container">
+      <section className="register">
+        <div className="register-container">
 
-          <div className="header">Register</div>
+          <h4>Register</h4>
 
           <form>
             <label htmlFor="username">
@@ -126,11 +126,6 @@ const Register = () => {
                 required
               />
             </label>
-            <br />
-
-            <input type="checkbox" className="checkbox" />
-            <span>Remember me</span>
-            {' '}
             <br />
 
             <div className="flex justify-center w-full my-2">
