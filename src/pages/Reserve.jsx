@@ -48,7 +48,7 @@ const Reserve = () => {
             {' '}
             <input type="date" placeholder="Enter Date..." onChange={(e) => setDate(e.target.value)} value={date} />
           </div>
-          <div className="input-container btn-reserve-container ">
+          <div className="btn-reserve-container ">
             <button type="submit" onClick={handleMakeReservation}>Reserve</button>
           </div>
         </form>

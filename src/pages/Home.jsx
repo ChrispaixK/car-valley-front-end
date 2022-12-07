@@ -8,6 +8,7 @@ import '../assets/cars.css';
 import MakeReservation from '../components/MakeReservation';
 import { NavLink } from 'react-router-dom';
 import { removeCookie } from '../services/cookie';
+import { FaEllipsisV } from 'react-icons/fa';
 
 const Home = () => {
   const cars = useSelector((state) => state.cars);
@@ -27,10 +28,15 @@ const Home = () => {
 
   const handleHideModal = () => setShowModal(false);
 
+  const [openOption, setOpenOption]= useState(false)
+
   return (
     <div className="content">
       <div className="header">
-        <button type="button" className="logout" onClick={logout}>Log Out</button>
+        <i className="logout" onClick={()=> {setOpenOption(!openOption)}}><FaEllipsisV/></i>
+        <div className={`dropdown-avatar ${openOption?'inactive' : 'active'} `}>
+            <button type="button" className="logout" onClick={logout} >Log Out</button>
+        </div>
       </div>
       <div className="cars">
 
@@ -51,18 +57,6 @@ const Home = () => {
                 {' '}
                 {car.release_date}
               </p>
-              <div>
-                <button
-                  type="button"
-                  className="btn-bookreservation"
-                  onClick={() => {
-                    setShowModal(true);
-                    setMCar(car);
-                  }}
-                >
-                  Book reservation
-                </button>
-              </div>
             </div>
           </NavLink>
         ))}

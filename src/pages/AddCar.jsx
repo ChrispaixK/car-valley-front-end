@@ -11,6 +11,7 @@ function AddCar() {
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
+  const [errMsg, setErrMsg] = useState(null);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -28,8 +29,11 @@ function AddCar() {
       description,
       release_date: releaseDate,
     };
+    if (model === '' || releaseDate === '' || color === '' || price === '' || description === '' || image === '') {
+      setErrMsg('All fields are required');
+      return;
+    }
     dispatch(addCar(newCar));
-    window.location = '/';
   };
   return (
     <div className="content">
@@ -75,6 +79,9 @@ function AddCar() {
             />
             <button type="submit">Add car</button>
           </form>
+          {
+            errMsg && <p className="error" aria-live="assertive">{errMsg}</p>
+          }
         </div>
         <div className="form-aside">
           <img

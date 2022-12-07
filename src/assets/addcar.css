@@ -1,6 +1,5 @@
 .add-car {
   display: flex;
-  margin-top: 50px;
 }
 
 .add-form {
@@ -17,9 +16,9 @@
   height: 40px;
   margin-bottom: 15px;
   border-radius: 5px;
-  padding-left: 5px;
   background-color: rgba(255, 186, 10, 0.438);
   border: none;
+  padding: 10px;
 }
 
 .add-form button {
@@ -30,16 +29,51 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
 .form-aside {
   width: 50%;
   background-color: var(--primary-color);
+  z-index: -5;
 }
 
 .form-aside img {
   max-width: 420px;
-  margin-top: 50px;
-  margin-left: -250px;
+  margin-top: 100px;
+  margin-left: -230px;
   position: fixed;
+  z-index: -5;
+}
+
+@media screen and (max-width: 468px) {
+  .add-car {
+    flex-direction: column;
+  }
+
+  .add-form {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .add-form input {
+    padding: 10px;
+  }
+
+  .add-form button {
+    width: 50%;
+  }
+
+  .form-aside {
+    width: 100%;
+    background-color: transparent;
+    height: 250px;
+  }
+
+  .form-aside img {
+    margin-top: 0;
+    margin-left: -150px;
+    margin-bottom: 0;
+  }
 }
