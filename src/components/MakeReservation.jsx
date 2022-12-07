@@ -9,7 +9,7 @@ import { returnCurrentUser } from '../services/cookie';
 import { addReservation } from '../redux/xers/reservationXer';
 import '../assets/App.css';
 
-function MakeReservation({ showModal, handleClose, car }) {
+const MakeReservation=({ showModal, handleClose, car })=> {
   const [userName, setUsername] = useState(returnCurrentUser().username);
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');

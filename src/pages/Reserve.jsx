@@ -46,7 +46,7 @@ const Reserve = () => {
           </div>
           <div className="input-container">
             <select className="select-input" onChange={(e) => setCar(e.target.value)}>
-              <option value=""> Select modal</option>
+              <option value=""> Select model</option>
               {cars.map((car) => <option value={car.id} key={car.id}>{car.model}</option>)}
             </select>
           </div>

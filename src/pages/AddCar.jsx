@@ -5,7 +5,7 @@ import '../assets/App.css';
 import '../assets/addcar.css';
 import { useEffect } from 'react';
 
-function AddCar() {
+const AddCar=()=> {
   const [model, setModel] = useState('');
   const [releaseDate, setReleaseDate] = useState('');
   const [color, setColor] = useState('');
