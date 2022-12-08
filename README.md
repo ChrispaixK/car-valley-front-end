@@ -86,6 +86,9 @@ npm install
 npm start
 ```
 ### [KanbanBoard link](https://github.com/users/Ibizugbe/projects/2)
+![image](https://user-images.githubusercontent.com/71190715/206404938-f3b5b68a-2f7b-45e7-b75d-483f1a2be02f.png)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
