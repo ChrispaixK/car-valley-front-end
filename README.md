@@ -45,6 +45,8 @@
 
 To get a local copy up and running, follow these steps.
 
+### 📌Clone the backend repository of this app [here](https://github.com/Ibizugbe/car-valley-backend)
+
 ### Prerequisites
 
 In order to run this project you need:
@@ -52,6 +54,8 @@ In order to run this project you need:
 ```sh
  gem install rails
 ```
+
+
 
 ### Setup
 
@@ -81,6 +85,7 @@ npm install
 ```
 npm start
 ```
+### [KanbanBoard link](https://github.com/users/Ibizugbe/projects/2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
