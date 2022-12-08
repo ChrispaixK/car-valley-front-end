@@ -157,6 +157,7 @@ input[type="checkbox"] {
   justify-content: flex-start;
   align-items: baseline;
   align-content: center;
+  margin-bottom: -40px;
 }
 
 .header i {
@@ -189,8 +190,18 @@ input[type="checkbox"] {
   font-size: 10px;
 }
 
+.top-t {
+  margin-top: 20px;
+}
+
+.top-t p {
+  font-size: 10px;
+  margin-top: -5px;
+  color: var(--text-2);
+}
+
 .cars {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .dropdown-avatar.active {

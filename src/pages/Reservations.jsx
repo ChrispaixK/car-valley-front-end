@@ -12,7 +12,10 @@ const Reservations = () => {
   useEffect(() => { dispatch(fetchReservations(returnCurrentUser().id)); }, [dispatch]);
   return (
     <div className="content">
-      <h2>Reservations page</h2>
+       <div className="top-t">
+         <h2>Reservation Page</h2>
+         <p>Here is the list of your reserved cars 📖</p>
+      </div>
       {reservations?.map((res) => (
         <div className="reserved-cars" key={res.id}>
           <div className="r-car">

@@ -37,8 +37,11 @@ const Reserve = () => {
 
   return (
     <div className="content">
-      <h3 className="reserve-title">Reservation form</h3>
       <div className="reserve-form">
+      <div className="top-t">
+         <h2>Reserve Page</h2>
+         <p>Use this form to reserve your favorite 🚗</p>
+      </div>
         <form className="form">
           <div className="input-container">
             {' '}

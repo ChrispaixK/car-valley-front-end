@@ -38,6 +38,11 @@ const Home = () => {
             <button type="button" className="logout" onClick={logout} >Log Out</button>
         </div>
       </div>
+      <div className="top-t">
+         <h2>Latest Models</h2>
+         <p>See our best car rentals collection 💎</p>
+      </div>
+     
       <div className="cars">
 
         {cars.map((car) => (

@@ -43,13 +43,13 @@ const CarDetails = () => {
             <p>
               Origin country :
               {' '}
-              No country
+              Germany
             </p>
             <p>
 
               Top Speed :
               {' '}
-              No speed
+              230 km/h
             </p>
             <p>
               Price :

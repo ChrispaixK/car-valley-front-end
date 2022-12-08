@@ -18,7 +18,10 @@ const DeleteCar = () => {
 
   return (
     <div className="content">
-      <h2>Delete page</h2>
+       <div className="top-t">
+         <h2>Delete cars</h2>
+         <p>Attention, deleted cars will no longer be available ⚠️</p>
+      </div>
       <div className="reserved-cars">
         {cars.map((car) => (
           <div className="r-car" key={car.id}>
