@@ -1,0 +1,96 @@
+.reserve-form {
+  text-align: center;
+  padding: 30px 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  width: 60%;
+}
+
+.input-container input,
+.select-input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid var(--primary-color);
+}
+
+.reserve-form button {
+  width: 51.2%;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.reserve-title {
+  color: var(--primary-color);
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.btn-bookreservation {
+  height: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cancelreservation {
+  height: 30px;
+  color: var(--primary-color);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-bookreservation:hover {
+  background-color: var(--secondary-color);
+  transition: 1s;
+}
+
+.btn-reserve-container {
+  width: 100%;
+}
+
+.btn-reserve-container > button {
+  width: 100px;
+}
+
+@media screen and (max-width: 468px) {
+  h3 {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 10px;
+  }
+
+  .input-container {
+    width: 100%;
+  }
+}

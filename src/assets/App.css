@@ -1,0 +1,240 @@
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100vh;
+  text-align: center;
+}
+
+.content h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.button-delete {
+  font-size: 12px;
+  padding: 3px 12px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #f00;
+  border: none;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.login-container {
+  max-width: 350px;
+  border-radius: 5px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.719);
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.login-container span {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-left: 5px;
+}
+
+.login-container button {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 10px;
+  padding: 5px 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.login-container a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.register {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.postimg.cc/YCGv7PmX/Mahindra-Scorpio-N-300620221053-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.register-container {
+  margin: 50px;
+  border-radius: 5px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.719);
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container input {
+  padding: 12px 20px;
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.register-container h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.register-container span {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-left: 5px;
+}
+
+.register-container button {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 10px;
+  padding: 5px 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(93, 83, 50, 0.137) 0 6px 12px -2px, rgba(0, 0, 0, 0.226) 0 3px 7px -3px;
+}
+
+.register-container a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: center;
+  margin-bottom: -40px;
+}
+
+.header i {
+  width: 10px;
+  height: 25px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px 10px 0;
+  border-radius: 3px;
+  box-shadow: rgba(93, 83, 50, 0.377) 0 6px 12px -2px, rgba(0, 0, 0, 0.452) 0 3px 7px -3px;
+}
+
+.modalheader {
+  color: var(--secondary-color);
+  font-size: 13px;
+}
+
+.modalheader h5 {
+  font-size: 18px;
+}
+
+.modalheader button {
+  background-color: #f00;
+  color: antiquewhite;
+  font-size: 10px;
+}
+
+.top-t {
+  margin-top: 20px;
+}
+
+.top-t p {
+  font-size: 10px;
+  margin-top: -5px;
+  color: var(--text-2);
+}
+
+.cars {
+  margin-top: 20px;
+}
+
+.dropdown-avatar.active {
+  display: none;
+}
+
+.dropdown-avatar {
+  height: 25px;
+}
+
+.dropdown-avatar button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 10px;
+  border: none;
+  margin-right: 5px;
+}
+
+.modal-reserve-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+@media screen and (max-width: 468px) {
+  .content {
+    margin-left: 0;
+  }
+}
